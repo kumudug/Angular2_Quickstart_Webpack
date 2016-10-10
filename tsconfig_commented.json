@@ -1,0 +1,22 @@
+﻿//json doesn't support comments. So this is converted using jsmin - http://www.crockford.com/javascript/jsmin.html
+//jsmin <tsconfig_commented.json >tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  }/*,
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ]*/
+}
+/*The core-js typings are duplicated and the browser.d.ts and main.d.ts have overlapping content.
+
+We must tell the compiler to ignore one or the other. We removed the main set from consideration in the exclude section of our tsconfig.json file:*/
